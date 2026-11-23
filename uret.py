@@ -115,19 +115,17 @@ GIZLILIK = {
             "<tr><td>Rastgele hesap kimliği (anonim oturum)</td><td>Gönderilerini sana bağlamak, kötüye kullanımı önlemek</td></tr>"
             "<tr><td>Takma ad, isteğe bağlı bebek yaş aralığı, uygulama dili</td><td>Profilin ve dil topluluğun</td></tr>"
             "<tr><td>Gönderiler, yanıtlar, anket oyları, beğeniler, kaydettiklerin</td><td>Topluluk hizmeti</td></tr>"
-            "<tr><td>Paylaştığın fotoğraflar (küçültülür, konum dahil EXIF bilgisi silinir)</td><td>Gönderide gösterim</td></tr>"
             "<tr><td>Bildirimlerin, engellediğin hesaplar, koşulları kabul zamanı</td><td>Moderasyon ve güvenlik</td></tr>"
             "<tr><td>E-posta adresi (yalnız hesabını e-postana bağlarsan)</td><td>Başka cihazda/webde aynı profile giriş</td></tr>"
             "</table>",
-            "Topluluk içeriği diğer kullanıcılara açıktır; kişisel bilgilerini (tam ad, telefon, adres) paylaşma. Telefon numarası ve e-posta içeren gönderiler sistem tarafından reddedilir.")
+            "Topluluğa fotoğraf yükleme bu sürümde kapalıdır. Topluluk içeriği diğer kullanıcılara açıktır; kişisel bilgilerini (tam ad, telefon, adres) paylaşma. Telefon numarası ve e-posta içeren gönderiler sistem tarafından reddedilir.")
     + bolum("Hizmet sağlayıcı ve konum",
             "Topluluk verileri Supabase (Supabase Inc.) altyapısında, Avrupa Birliği'nde (İrlanda, eu-west-1) saklanır. Supabase verileri yalnız bizim adımıza işler.")
     + bolum("Hukuki dayanak (KVKK / GDPR)",
             "Topluluk hizmetini sunmak için sözleşmenin ifası; güvenlik ve moderasyon için meşru menfaat. Cihazdaki kayıtlar bizim tarafımızdan işlenmez.")
     + bolum("Saklama ve silme",
-            f'Topluluk verilerin hesabını silene kadar tutulur. Ayarlar › Hesabı sil profilini, gönderilerini, yanıtlarını, fotoğraflarını, beğenilerini, bildirimlerini ve kimliğini anında ve kalıcı olarak siler. Ayrıntı: <a href="{dosya("delete", "tr")}">Hesap silme</a>.')
-    + bolum("İzinler", ul("Fotoğraflar: yalnız gönderiye eklemek istediğin fotoğrafı seçtiğinde.",
-                          "Bildirimler: süren uyku zamanlayıcısını göstermek için (yerel bildirim)."))
+            f'Topluluk verilerin hesabını silene kadar tutulur. Ayarlar › Hesabı sil profilini, gönderilerini, yanıtlarını, beğenilerini, bildirimlerini ve kimliğini anında ve kalıcı olarak siler. Ayrıntı: <a href="{dosya("delete", "tr")}">Hesap silme</a>.')
+    + bolum("İzinler", ul("Bildirimler: süren uyku zamanlayıcısını göstermek için (yerel bildirim)."))
     + bolum("Haklarınız",
             f"Verilerine erişme, düzeltme, silme, işlemeye itiraz etme ve şikâyette bulunma hakkın vardır (KVKK md. 11, GDPR md. 15–22). Talebin için: {M}.")
     + bolum("Çocuklar", "Baby Day Space ebeveynler ve bakım verenler içindir; 18 yaş altındaki kişilere yönelik değildir ve bilerek çocuklardan veri toplamaz.")
@@ -144,19 +142,17 @@ GIZLILIK = {
             "<tr><td>Random account ID (anonymous session)</td><td>Link your posts to you, prevent abuse</td></tr>"
             "<tr><td>Nickname, optional baby age range, app language</td><td>Your profile and language community</td></tr>"
             "<tr><td>Posts, replies, poll votes, likes, saved posts</td><td>Community service</td></tr>"
-            "<tr><td>Photos you share (resized; EXIF incl. location removed)</td><td>Display in your post</td></tr>"
             "<tr><td>Your reports, accounts you block, time you accepted the terms</td><td>Moderation and safety</td></tr>"
             "<tr><td>Email address (only if you link your account to email)</td><td>Sign in to the same profile on another device/web</td></tr>"
             "</table>",
-            "Community content is visible to other users; do not share personal details (full name, phone, address). Posts containing phone numbers or email addresses are rejected automatically.")
+            "Photo uploads to the community are not available in this version. Community content is visible to other users; do not share personal details (full name, phone, address). Posts containing phone numbers or email addresses are rejected automatically.")
     + bolum("Service provider and location",
             "Community data is stored with Supabase (Supabase Inc.) in the European Union (Ireland, eu-west-1). Supabase processes the data only on our behalf.")
     + bolum("Legal basis (GDPR)",
             "Performance of a contract to provide the community; legitimate interest for safety and moderation. On-device records are not processed by us.")
     + bolum("Retention and deletion",
-            f'Community data is kept until you delete your account. Settings › Delete account immediately and permanently deletes your profile, posts, replies, photos, likes, reports and identity. Details: <a href="{dosya("delete", "en")}">Account deletion</a>.')
-    + bolum("Permissions", ul("Photos: only when you choose a photo to attach to a post.",
-                              "Notifications: to show a running sleep timer (local notification)."))
+            f'Community data is kept until you delete your account. Settings › Delete account immediately and permanently deletes your profile, posts, replies, likes, reports and identity. Details: <a href="{dosya("delete", "en")}">Account deletion</a>.')
+    + bolum("Permissions", ul("Notifications: to show a running sleep timer (local notification)."))
     + bolum("Your rights",
             f"You have the right to access, rectify, erase, object and lodge a complaint (GDPR Art. 15–22, KVKK Art. 11). Requests: {M}.")
     + bolum("Children", "Baby Day Space is for parents and caregivers; it is not directed to people under 18 and does not knowingly collect data from children.")
@@ -209,13 +205,13 @@ KOSULLAR = {
 SILME = {
     "tr": bolum("Uygulamadan silme (önerilen)", ul("Baby Day Space'i aç.", "Ayarlar › Hesabı sil'e dokun.", "Onayla. Silme anında ve kalıcıdır."))
     + bolum("Silinen veriler", ul("Topluluk profilin, takma adın, gönderilerin, yanıtların, anket oyların, beğenilerin, kaydettiklerin",
-                                  "Paylaştığın fotoğraflar", "Bildirimlerin, engel listen, koşul kabul kaydın, hesabına bağlı e-posta",
+                                  "Bildirimlerin, engel listen, koşul kabul kaydın, hesabına bağlı e-posta",
                                   "Cihazdaki tüm aktivite kayıtları ve ayarlar"),
             "Saklanan veri yoktur: silme sonrası yedek ya da arşiv tutulmaz.")
     + bolum("Uygulamaya erişemiyorsan", f"Uygulamayı sildiysen ya da açamıyorsan {M} adresine \"Hesap silme\" konulu bir e-posta gönder; topluluktaki takma adını yaz. Talebini 7 gün içinde tamamlar ve sana bildiririz."),
     "en": bolum("Delete in the app (recommended)", ul("Open Baby Day Space.", "Go to Settings › Delete account.", "Confirm. Deletion is immediate and permanent."))
     + bolum("What is deleted", ul("Your community profile, nickname, posts, replies, poll votes, likes, saved posts",
-                                  "Photos you shared", "Your reports, block list, terms acceptance record, linked email",
+                                  "Your reports, block list, terms acceptance record, linked email",
                                   "All activity records and settings on the device"),
             "Nothing is retained: no backup or archive is kept after deletion.")
     + bolum("If you can't access the app", f"If you uninstalled the app or cannot open it, email {M} with the subject \"Account deletion\" and include your community nickname. We complete the request within 7 days and confirm by email."),
